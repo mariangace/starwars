@@ -88,6 +88,14 @@ function startAnimating(fps) {
   animate();
 }
 
+let numberOfEnemies = 10;
+const enemiesArray = [];
+let gameFrame = 0;
+
+for (let i = 0; i < numberOfEnemies; i++) {
+  enemiesArray.push(new Enemy());
+}
+
 //to control frame speed
 function animate() {
   requestAnimationFrame(animate);
@@ -109,6 +117,11 @@ function animate() {
       player.height
     );
     movePlayer();
+    enemiesArray.forEach((enemy) => {
+      enemy.update();
+      enemy.draw();
+    });
+    gameFrame--;
     handlePlayerFrame();
   }
 }
