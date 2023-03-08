@@ -1,6 +1,6 @@
 # starwars
 
-a Star Wars mini game build with vanilla Js
+a Star Wars mini game built with vanilla Js
 
 To see live projects go to:
 
